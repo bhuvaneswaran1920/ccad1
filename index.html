@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>43CCDA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark ">
+        <div class="container-fluid">
+          <span class="navbar-brand mb-0 h1">Transpose of a Square Matrix</span>
+        </div>
+      </nav>
+    
+    <!-- <button onclick="myFunction()" id="myBtn">get transpose</button><br> -->
+    
+    
+    <script>
+       
+        var r,c; 
+        r = prompt('Enter the number of rows');
+        c = prompt('Enter the number of columns');
+        var mat = [];
+            for (var i=0; i<r; i++){
+            mat[i] = [];                    
+            for (var j=0; j<c; j++){
+             mat[i][j]= prompt ('Enter a value for the cell ' + i + 'x' + j); 
+             }
+            }
+        console.log(mat);
+        document.write("the matrix is:<br>");
+        for (var i = 0; i < r; i++) { 
+        for (var j = 0; j < c; j++) 
+  
+            { 
+                document.write(mat[i][j] + " "); 
+            } 
+         document.write("<br>"); 
+        }
+
+
+        
+        
+
+        const transpose = mat => {
+        for (let i = 0; i < mat.length; i++) {
+        for (let j = 0; j < i; j++) {
+         const tmp = mat[i][j];
+         mat[i][j] = mat[j][i];
+         mat[j][i] = tmp;
+          };
+         }
+        }
+        transpose(mat);
+        console.log(mat);
+        // document.write(' <XMP> ');
+        // document.write('Transpose of matrix \t' + mat + '\r');
+        // function myFunction() {
+        // document.getElementById("demo").innerHTML = mat;  
+        // }
+        // document.write('</XMP>');
+        
+            document.write("the transpose of the matrix is:<br>");
+        for (var i = 0; i < r; i++) { 
+        for (var j = 0; j < c; j++) 
+  
+            { 
+                document.write(mat[i][j] + " "); 
+            } 
+         document.write("<br>"); 
+        }
+        
+    
+    </script>
+</body>
+</html>
